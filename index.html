@@ -1,24 +1,24 @@
 <DOCTYPE! HTML>
-<html lang="en-us" ng-app = "mainApp">    
+<html lang="en-us">    
     
 <head>
     <title>Aayush Shah</title>
+     <script src="//code.angularjs.org/1.5.0-rc.2/angular.min.js"></script>
+     <script src="//code.angularjs.org/1.5.0-rc.2/angular-animate.min.js"></script>
+     <script src="app.js"></script>
     <link rel="stylesheet" href="animate.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
-    <script src = "/js/angular.min.js"></script>
-    <script src ="app.js"></script>
 </head>
 
-<body style= "background-color: rgb(241,241,241)">
-    
+<body style= "background-color: rgb(241,241,241)" ng-app="mainApp">
     <header style="width: 100%; height: 200px; background: url('/images/clv.jpg') no-repeat top left; background-size: cover; margin-top:0px; position: relative;">
         <div style = "">
           <img src = "/images/me2.jpg" class = "img-circle center-block animated bounceInRight" width="120px" height="120px" style = "margin:0 auto">  
         </div>
     </header>
     
-<div class= "container center-block" style = "font-size: 1.4em"> 
+<div class="container center-block" style="font-size: 1.4em" ng-controller="mainController"> 
           
            <div class = "container" style="font-family: 'Raleway', sans-serif;"> 
         <div class = 'animated bounceInUp'>
@@ -45,7 +45,9 @@
         </div>
 
                <hr>
-        <div class = "animated bounceInUp container center-block" style="margin-left: auto; margin-right:auto">
+               <input type="button" value = "Check out my resume!" class = "btn btn-success" ng-click="resumeShow()"/>
+               <hr>
+        <div class = "animated bounceInUp container center-block" style="margin-left: auto; margin-right:auto" ng-show="showDiv">
                <iframe src="https://resume.creddle.io/embed/97uyvqs4wil"
   width="850" height="1100" seamless></iframe>
                </div>
