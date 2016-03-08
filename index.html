@@ -13,7 +13,7 @@
 </head>
 
 <body style= "background-color: rgb(241,241,241)" ng-app="mainApp">
-    <header style="width: 100%; height: 200px; background: url('/images/clv.jpg') no-repeat top left; background-size: cover; margin-top:0px; position: relative;">
+    <header style="width: 100%; height: 200px; background: url('/images/clv.jpg') no-repeat top left; background-size: cover; margin-top:0px; position: relative;" class=" ">
         <div style = "">
           <img src = "/images/me2.jpg" class = "img-circle center-block animated bounceInRight" width="120px" height="120px" style = "margin:0 auto">  
         </div>
@@ -47,12 +47,12 @@
 
         <div class = 'text-center' class ='pagination-centered'>
                               <hr>
-               <input type="button" value = "Check out my resume!" class = "btn btn-success" ng-click="resumeShow()"/> 
+               <input type="button" value = "Check out my resume!" class = "btn btn-success" ng-click="resumeShow()" ng-click="scrollDown()"/> 
             <hr>
                <a href="//github.com/aayushshah15/"><i class="fa fa-github fa-2x"></i></a>
                <hr>
         <div class = "animated bounceInUp container center-block" style="margin-left: auto; margin-right:auto" ng-show="showDiv">
-               <iframe src="https://resume.creddle.io/embed/97uyvqs4wil"
+               <iframe id="bottom" src="https://resume.creddle.io/embed/97uyvqs4wil"
   width="850" height="1100" seamless></iframe>
                </div>
   
