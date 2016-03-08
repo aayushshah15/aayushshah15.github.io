@@ -13,6 +13,7 @@ mainApp.controller('mainController', function ($scope, $log, $anchorScroll, $loc
     
     $scope.scrollDown = function () {
         $location.hash('bottom');
+        $anchorScroll();
     };
         
 }); 
