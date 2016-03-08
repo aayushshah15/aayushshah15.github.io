@@ -15,4 +15,4 @@ mainApp.controller('mainController', function ($scope, $log, $anchorScroll, $loc
         $location.hash('bottom');
     };
         
-});
+}); 
