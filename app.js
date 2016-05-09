@@ -1,25 +1,41 @@
 /*global angular */
 
-var mainApp = angular.module('mainApp', []);
+var mainApp = angular.module('mainApp', ['ngRoute']);
 
+mainApp.config(function ($routeProvider){
+    $routeProvider
+    .when('/', {
+        templateUrl: '/pages/about.html',
+        controller: 'aboutController'
+    })
+    .when('/projects', {
+        templateUrl: '/pages/projects.html',
+        controller: 'projectController'
+    })
+    .when('/resume', {
+        templateUrl: '/pages/resume.html',
+        controller: 'resumeController'
+    })
+    .otherwise({
+        templateUrl: '/pages/about.html',
+        controller: 'aboutController'
+    })
+});
 
 mainApp.controller('mainController', function ($scope, $log, $anchorScroll, $location, $timeout) {
     "use strict";
-    $scope.showDiv = false;
-    $scope.intro = false;
-    $scope.intro2 = false;
-    $scope.intro3 = false;
-    $scope.intro4 = false;
-    $timeout(function () { $scope.intro = true; }, 4000);
-    $timeout(function () { $scope.intro2 = true; }, 4000);
-    $timeout(function () { $scope.intro3 = true; }, 7000);
-    $timeout(function () { $scope.intro4 = true; }, 2000);
-    $scope.resumeShow = function () {
-        $scope.showDiv = !$scope.showDiv;
-    };
-    
-    $scope.scrollDown = function () {
-        $location.hash('bottom');
-        $anchorScroll();
-    };       
+    $scope.show_resume = false;
+    $scope.resume = function () {
+        $scope.show_resume = !$scope.show_resume;
+    }
+    $scope.manage = function () {
+        if ($scope.show_resume) {
+            $scope.show_resume = !$scope.show_resume;
+        }
+    }
 }); 
+
+mainApp.controller('aboutController', function($scope, $log, $anchorScroll, $timeout){
+    "use strict";
+});
+
