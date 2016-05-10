@@ -26,6 +26,9 @@ mainApp.controller('mainController', function ($scope, $log, $anchorScroll, $loc
     "use strict";
     $scope.show_resume = false;
     $scope.resume = function () {
+        if ($scope.show_resume) {
+            return;
+        }
         $scope.show_resume = !$scope.show_resume;
     }
     $scope.manage = function () {
