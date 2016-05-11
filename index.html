@@ -10,7 +10,7 @@
 <body ng-app='mainApp' ng-controller='mainController'>
 <div class="ui fixed inverted large top hidden menu sticky">
     <div class="ui container">
-        <div class="header item"><i class="terminal large icon"></i>Aayush</div>
+        <a class="header item" href="#/about" ng-click='manage()'><i class="terminal large icon"></i>Aayush</a>
     </div>
     <a href="#/about" class="item" ng-click='manage()'><i class="ui user icon"></i>About Me</a>
     <a href="#/projects" class="item" ng-click='manage()'><i class="ui idea icon"></i>Projects</a>
@@ -21,7 +21,7 @@
 <hr/>
 <hr/>
 <hr/>
-
+<div class="ui hidden divider"></div>
 <div ng-view></div>
 <div>
 <div class="ui centered animated bounceInRight text-center" ng-show="show_resume">
@@ -29,7 +29,6 @@
   width="850" height="1100" seamless class="ui "></iframe>
 </div>
 </div>
-
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>

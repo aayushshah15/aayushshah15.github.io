@@ -6,3 +6,7 @@ body{
 .distance{
 	margin-top: 40px;
 }
+
+img a:hover{
+	filter: blur(20px);
+}
